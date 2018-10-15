@@ -2,13 +2,32 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
+import Quiz from './quiz';
 
 export class Dashboard extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            onQuiz: false,
+            quizButton: 'Start'
+        }
+    }
     componentDidMount() {
         this.props.dispatch(fetchProtectedData());
     }
-
+    toggleOnQuiz() {
+        this.setState({
+            onQuiz: !this.state.onQuiz,
+            quizButton: (this.state.quizButton === 'Stop' ? 'Start' : 'Stop')
+        });
+    }
     render() {
+        let quizArea;
+        if (!this.state.onQuiz) {
+            quizArea = '';
+        } else {
+            quizArea = <Quiz />
+        }
         return (
             <div className="dashboard">
                 <div className="dashboard-username">
@@ -18,6 +37,8 @@ export class Dashboard extends React.Component {
                 <div className="dashboard-protected-data">
                     Protected data: {this.props.protectedData}
                 </div>
+                <button type='button' onClick={() => this.toggleOnQuiz()}>{this.state.quizButton} Quiz</button>
+                {quizArea}
             </div>
         );
     }
