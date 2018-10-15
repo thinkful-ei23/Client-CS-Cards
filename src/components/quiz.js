@@ -1,19 +1,37 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchQuestion} from '../actions/quiz';
+import {fetchQuestion, sendAnswer} from '../actions/quiz';
 
 export class Quiz extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchQuestion());
-}
+  }
+  
   render() {
     let question;
     if(this.props.question) {
       question = this.props.question;
     }
+    let userAnswer;
+    const submitAnswer = (value) => {
+      value.preventDefault();
+      this.props.dispatch(sendAnswer(userAnswer.value));
+    }
+    let answer;
+    if (this.props.answer) {
+      answer = <p>{this.props.answer.answer}</p>
+    }
+    else {
+      answer = '';
+    }
     return (
       <div>
+        {answer}
         {question}
+        <form onSubmit={(userAnswer) => submitAnswer(userAnswer)}>
+          <input id='answer' ref={input => (userAnswer = input)} type='text'></input>
+          <button type='submit'>Submit</button>
+        </form>
       </div>
     )
   }
@@ -21,7 +39,8 @@ export class Quiz extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    question: state.quiz.question
+    question: state.quiz.question,
+    answer: state.quiz.answer
   };
 };
 
