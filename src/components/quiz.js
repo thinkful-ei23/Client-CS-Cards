@@ -9,7 +9,7 @@ export class Quiz extends React.Component {
   render() {
     let question;
     if(this.props.question) {
-      question = this.props.question;
+      // question = this.props.question;
     }
     return (
       <div>
