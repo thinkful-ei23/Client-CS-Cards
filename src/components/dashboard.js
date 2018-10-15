@@ -11,13 +11,11 @@ export class Dashboard extends React.Component {
     render() {
         return (
             <div className="dashboard">
-                <div className="dashboard-username">
-                    Username: {this.props.username}
-                </div>
-                <div className="dashboard-name">Name: {this.props.name}</div>
-                <div className="dashboard-protected-data">
-                    Protected data: {this.props.protectedData}
-                </div>
+                    <h3 className="dashboard-username">
+                        Welcome, {this.props.name}
+                    </h3>
+                <div className ='window-border'></div>
+                <button className='resume-button'>Resume Cards</button>
             </div>
         );
     }
