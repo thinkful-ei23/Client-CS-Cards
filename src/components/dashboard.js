@@ -30,6 +30,7 @@ export class Dashboard extends React.Component {
         } else {
             quizArea = <Quiz />
         }
+        console.log(this.props.stats, 'Current Stats');
         return (
             <div className="dashboard">
                 <div className="dashboard-username">
@@ -38,6 +39,7 @@ export class Dashboard extends React.Component {
                 <div className="dashboard-name">Name: {this.props.name}</div>
                 <div className='stats-container'>
                 <p>Total Questions Answered: {this.props.stats ? this.props.stats.totalQuestions : 0}</p>
+                <p>Lifetime {this.props.stats && (this.props.stats.totalQuestions !==0) ? Math.floor(this.props.stats.totalRight/this.props.stats.totalQuestions) * 100 : 0}% Answered Correctly</p>
                 <p>{this.props.stats ? this.props.stats.recurringCorrect : 0 } Correct Questions In a Row!</p>
                 </div>
 
