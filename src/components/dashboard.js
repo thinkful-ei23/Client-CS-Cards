@@ -30,9 +30,6 @@ export class Dashboard extends React.Component {
         } else {
             quizArea = <Quiz />
         }
-        if (this.props.stats) {
-            console.log('stats', this.props.stats);
-        }
         return (
             <div className="dashboard">
                 <div className="dashboard-username">
@@ -40,8 +37,8 @@ export class Dashboard extends React.Component {
                 </div>
                 <div className="dashboard-name">Name: {this.props.name}</div>
                 <div className='stats-container'>
-                <p>Total Questions Answered: </p>
-                <p> Correct Questions In a Row!</p>
+                <p>Total Questions Answered: {this.props.stats ? this.props.stats.totalQuestions : 0}</p>
+                <p>{this.props.stats ? this.props.stats.recuringCorrect : 0 } Correct Questions In a Row!</p>
                 </div>
 
                 <button type='button' onClick={() => this.toggleOnQuiz()}>{this.state.quizButton} Quiz</button>
@@ -57,7 +54,7 @@ const mapStateToProps = state => {
         username: state.auth.currentUser.username,
         name: `${currentUser.firstName} ${currentUser.lastName}`,
         protectedData: state.protectedData.data,
-        stats: state.stats
+        stats: state.stats.stats
     };
 };
 
