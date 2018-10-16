@@ -12,8 +12,7 @@ export const registerUser = user => dispatch => {
         body: JSON.stringify(user)
     })
         .then(res => normalizeResponseErrors(res))
-        .then(res => {
-            console.log(res.json())})
+        .then(res => res.json())
         .catch(err => {
             const {reason, message, location} = err;
             if (reason === 'ValidationError') {
@@ -27,13 +26,14 @@ export const registerUser = user => dispatch => {
         });
 };
 
-export const createQuizStats = id => dispatch => {
+export const createQuizStats = username => dispatch => {
+    console.log('USER', username)
     return fetch(`${API_BASE_URL}/stats`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
         },
-        body: JSON.stringify(id)
+        body: JSON.stringify({username})
     })
     .then(res => normalizeResponseErrors(res))
         .then(res => {
