@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchProtectedData} from '../actions/protected-data';
+import {fetchStats} from '../actions/stats';
 import Quiz from './quiz';
 
 export class Dashboard extends React.Component {
@@ -14,6 +15,7 @@ export class Dashboard extends React.Component {
     }
     componentDidMount() {
         this.props.dispatch(fetchProtectedData());
+        this.props.dispatch(fetchStats());
     }
     toggleOnQuiz() {
         this.setState({
@@ -34,6 +36,11 @@ export class Dashboard extends React.Component {
                     Username: {this.props.username}
                 </div>
                 <div className="dashboard-name">Name: {this.props.name}</div>
+                <div className='stats-container'>
+                <p>Total Questions Answered: </p>
+                <p> Correct Questions In a Row!</p>
+                </div>
+
                 <button type='button' onClick={() => this.toggleOnQuiz()}>{this.state.quizButton} Quiz</button>
                 {quizArea}
             </div>
@@ -46,7 +53,8 @@ const mapStateToProps = state => {
     return {
         username: state.auth.currentUser.username,
         name: `${currentUser.firstName} ${currentUser.lastName}`,
-        protectedData: state.protectedData.data
+        protectedData: state.protectedData.data,
+        stats: state.stats
     };
 };
 
