@@ -7,6 +7,10 @@ export class Quiz extends React.Component {
     this.props.dispatch(fetchQuestion());
   }
   
+  fetchNextQuestion() {
+    this.props.dispatch(fetchQuestion());
+  }
+
   render() {
     let question;
     if(this.props.question) {
@@ -19,7 +23,11 @@ export class Quiz extends React.Component {
     }
     let answer;
     if (this.props.answer) {
-      answer = <p>{this.props.answer.answer}</p>
+      answer = 
+      <div>
+        <p>{this.props.answer.answer}</p>
+        <button onClick={() => this.fetchNextQuestion()}>Next</button>
+      </div>
     }
     else {
       answer = '';
