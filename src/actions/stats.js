@@ -31,7 +31,6 @@ export const fetchStats = () => (dispatch, getState) => {
       .then(res => normalizeResponseErrors(res))
       .then(res => res.json())
       .then((stats) => {
-      console.log('action/stats', stats)
       dispatch(fetchStatsSuccess(stats))})
       .catch(err => {
           dispatch(fetchStatsError(err));

@@ -27,7 +27,6 @@ export const registerUser = user => dispatch => {
 };
 
 export const createQuizStats = username => dispatch => {
-    console.log('USER', username)
     return fetch(`${API_BASE_URL}/stats`, {
         method: 'POST',
         headers: {
@@ -36,8 +35,7 @@ export const createQuizStats = username => dispatch => {
         body: JSON.stringify({username})
     })
     .then(res => normalizeResponseErrors(res))
-        .then(res => {
-            console.log(res.json())})
+        .then(res => res.json())
         .catch(err => {
             const {reason, message, location} = err;
             if (reason === 'ValidationError') {
