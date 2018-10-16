@@ -21,27 +21,25 @@ export class Quiz extends React.Component {
       value.preventDefault();
       this.props.dispatch(sendAnswer(userAnswer.value));
     }
-    let answer;
     if (this.props.answer) {
-      answer = 
+      return (
       <div>
         <p>{this.props.answer.answer}</p>
+        <p>{this.props.answer.correctAnswer} : {this.props.question}</p>
         <button onClick={() => this.fetchNextQuestion()}>Next</button>
       </div>
+      );
+    } else {
+      return (
+        <div>
+          {question}
+          <form onSubmit={(userAnswer) => submitAnswer(userAnswer)}>
+            <input id='answer' ref={input => (userAnswer = input)} type='text'></input>
+            <button type='submit'>Submit</button>
+          </form>
+        </div>
+      );
     }
-    else {
-      answer = '';
-    }
-    return (
-      <div>
-        {answer}
-        {question}
-        <form onSubmit={(userAnswer) => submitAnswer(userAnswer)}>
-          <input id='answer' ref={input => (userAnswer = input)} type='text'></input>
-          <button type='submit'>Submit</button>
-        </form>
-      </div>
-    )
   }
 }
 
