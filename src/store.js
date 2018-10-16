@@ -7,7 +7,6 @@ import protectedDataReducer from './reducers/protected-data';
 import quizReducer from './reducers/quiz';
 import statsReducer from './reducers/stats';
 import {setAuthToken, refreshAuthToken} from './actions/auth';
-import statsReducer from './reducers/stats';
 
 const store = createStore(
     combineReducers({

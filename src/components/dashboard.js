@@ -30,6 +30,9 @@ export class Dashboard extends React.Component {
         } else {
             quizArea = <Quiz />
         }
+        if (this.props.stats) {
+            console.log('stats', this.props.stats);
+        }
         return (
             <div className="dashboard">
                 <div className="dashboard-username">
