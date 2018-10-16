@@ -28,7 +28,7 @@ export const fetchStats = () => (dispatch, getState) => {
           Authorization: `Bearer ${authToken}`
       }
   })
-      // .then(res => normalizeResponseErrors(res))
+      .then(res => normalizeResponseErrors(res))
       .then(res => res.json())
       .then((stats) => {
       console.log('action/stats', stats)

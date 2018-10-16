@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchQuestion, sendAnswer} from '../actions/quiz';
+import { fetchStats } from '../actions/stats';
 
 export class Quiz extends React.Component {
   componentDidMount() {
@@ -9,6 +10,7 @@ export class Quiz extends React.Component {
   
   fetchNextQuestion() {
     this.props.dispatch(fetchQuestion());
+    this.props.dispatch(fetchStats());
   }
 
   render() {

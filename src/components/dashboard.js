@@ -38,7 +38,7 @@ export class Dashboard extends React.Component {
                 <div className="dashboard-name">Name: {this.props.name}</div>
                 <div className='stats-container'>
                 <p>Total Questions Answered: {this.props.stats ? this.props.stats.totalQuestions : 0}</p>
-                <p>{this.props.stats ? this.props.stats.recuringCorrect : 0 } Correct Questions In a Row!</p>
+                <p>{this.props.stats ? this.props.stats.recurringCorrect : 0 } Correct Questions In a Row!</p>
                 </div>
 
                 <button type='button' onClick={() => this.toggleOnQuiz()}>{this.state.quizButton} Quiz</button>
