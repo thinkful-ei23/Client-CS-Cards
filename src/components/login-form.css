@@ -1,0 +1,12 @@
+.login-form{
+  text-align: center;
+  width: 170px;
+  margin: 0 auto;
+}
+#username, #password, .login-button {
+  width: 100%;
+}
+.login-button{
+  margin: 5% 2%;
+  border: 1px solid black
+}
