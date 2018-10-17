@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchStats} from '../actions/stats';
-
 import Quiz from './quiz';
 
 import './dashboard.css' 
@@ -25,13 +24,13 @@ export class Dashboard extends React.Component {
         });
     }
     render() {
-        console.log(this.props.stats)
         let quizArea;
         if (!this.state.onQuiz) {
             quizArea = '';
         } else {
             quizArea = <Quiz />
         }
+        console.log(this.props.onQuiz)
         return (
             <div className="dashboard">
                 <div className='stats-container'>

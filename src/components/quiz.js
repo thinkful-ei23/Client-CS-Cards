@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchQuestion, sendAnswer} from '../actions/quiz';
 import { fetchStats } from '../actions/stats';
+import requiresLogin from './requires-login';
 
 import './quiz.css';
 
@@ -54,4 +55,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(Quiz);
+export default requiresLogin()(connect(mapStateToProps)(Quiz));
