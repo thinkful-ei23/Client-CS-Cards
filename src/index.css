@@ -1,6 +1,5 @@
 body {
   display: flex;
   justify-content: center;
-  min-height: 95vh;
-  align-items: center;
+  box-sizing: border-box;
 }

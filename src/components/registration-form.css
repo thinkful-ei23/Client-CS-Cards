@@ -1,0 +1,14 @@
+.registration-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#firstName, #username, #password, #passwordConfirm,.registration-button { 
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 1px;
+  margin: 2%; 
+}
+.registration-button:hover {
+  cursor: pointer;
+}
