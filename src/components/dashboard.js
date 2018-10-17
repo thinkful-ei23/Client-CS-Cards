@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchStats} from '../actions/stats';
+
 import Quiz from './quiz';
 
 import './dashboard.css' 
@@ -33,16 +34,11 @@ export class Dashboard extends React.Component {
         }
         return (
             <div className="dashboard">
-                <div className="dashboard-username">
-                    Username: {this.props.username}
-                </div>
-                <div className="dashboard-name">Name: {this.props.name}</div>
                 <div className='stats-container'>
-                <p>Total Questions Answered: {this.props.stats ? this.props.stats.totalQuestions : 0}</p>
-                <p>Lifetime {(this.props.stats && this.props.stats.totalQuestions !== 0) ? Math.floor(this.props.stats.totalRight/this.props.stats.totalQuestions * 100): 0}% Answered Correctly</p>
-                <p>{this.props.stats ? this.props.stats.recurringCorrect : 0 } Correct Questions In a Row!</p>
+                    <p className='stats-total'>Total Questions Answered: {this.props.stats ? this.props.stats.totalQuestions : 0}</p>
+                    <p className='stats-lifetime'>Lifetime {(this.props.stats && this.props.stats.totalQuestions !== 0) ? Math.floor(this.props.stats.totalRight/this.props.stats.totalQuestions * 100): 0}% Answered Correctly</p>
+                    <p className='stats-current-correct'>{this.props.stats ? this.props.stats.recurringCorrect : 0 } Correct Questions In a Row!</p>
                 </div>
-
                 <button type='button' className='button-toggle-quiz'onClick={() => this.toggleOnQuiz()}>{this.state.quizButton} Quiz</button>
                 {quizArea}
             </div>
