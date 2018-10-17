@@ -4,6 +4,8 @@ import {registerUser, createQuizStats} from '../actions/users';
 import {login} from '../actions/auth';
 import Input from './input';
 import {required, nonEmpty, matches, length, isTrimmed} from '../validators';
+import './registration-form.css';
+
 const passwordLength = length({min: 10, max: 72});
 const matchesPassword = matches('password');
 
@@ -26,8 +28,6 @@ export class RegistrationForm extends React.Component {
                 )}>
                 <label htmlFor="firstName">First name</label>
                 <Field component={Input} type="text" name="firstName" />
-                <label htmlFor="lastName">Last name</label>
-                <Field component={Input} type="text" name="lastName" />
                 <label htmlFor="username">Username</label>
                 <Field
                     component={Input}
