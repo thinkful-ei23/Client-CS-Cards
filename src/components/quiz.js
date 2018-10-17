@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {fetchQuestion, sendAnswer} from '../actions/quiz';
 import { fetchStats } from '../actions/stats';
 
+import './quiz.css';
+
 export class Quiz extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchQuestion());
@@ -33,11 +35,11 @@ export class Quiz extends React.Component {
       );
     } else {
       return (
-        <div>
+        <div className='quiz'>
           {question}
-          <form onSubmit={(userAnswer) => submitAnswer(userAnswer)}>
-            <input id='answer' ref={input => (userAnswer = input)} type='text'></input>
-            <button type='submit'>Submit</button>
+          <form className='quiz-form' onSubmit={(userAnswer) => submitAnswer(userAnswer)}>
+            <input id='answer' className='quiz-input' ref={input => (userAnswer = input)} type='text'></input>
+            <button className='quiz-button-submit' type='submit'>Submit</button>
           </form>
         </div>
       );

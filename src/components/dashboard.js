@@ -1,9 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchProtectedData} from '../actions/protected-data';
 import {fetchStats} from '../actions/stats';
 import Quiz from './quiz';
+
+import './dashboard.css' 
 
 export class Dashboard extends React.Component {
     constructor(props) {
@@ -14,7 +15,6 @@ export class Dashboard extends React.Component {
         }
     }
     componentDidMount() {
-        this.props.dispatch(fetchProtectedData());
         this.props.dispatch(fetchStats());
     }
     toggleOnQuiz() {
@@ -30,7 +30,6 @@ export class Dashboard extends React.Component {
         } else {
             quizArea = <Quiz />
         }
-        console.log(this.props.stats, 'Current Stats');
         return (
             <div className="dashboard">
                 <div className="dashboard-username">
@@ -43,7 +42,7 @@ export class Dashboard extends React.Component {
                 <p>{this.props.stats ? this.props.stats.recurringCorrect : 0 } Correct Questions In a Row!</p>
                 </div>
 
-                <button type='button' onClick={() => this.toggleOnQuiz()}>{this.state.quizButton} Quiz</button>
+                <button type='button' className='button-toggle-quiz'onClick={() => this.toggleOnQuiz()}>{this.state.quizButton} Quiz</button>
                 {quizArea}
             </div>
         );
@@ -55,7 +54,7 @@ const mapStateToProps = state => {
     return {
         username: state.auth.currentUser.username,
         name: `${currentUser.firstName} ${currentUser.lastName}`,
-        protectedData: state.protectedData.data,
+        
         stats: state.stats.stats
     };
 };
