@@ -18,4 +18,12 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align:center;
+}
+.login-button{
+    width: 170px;
+    margin: 2%;
+    border: 1px solid black
 }
