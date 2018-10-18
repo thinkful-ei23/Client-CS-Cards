@@ -3,6 +3,10 @@
   width: 150px;
   margin: 0 auto;
 }
+.registration-h2 {
+  display: flex;
+  justify-content: center;
+}
 #firstName, #username, #password, #passwordConfirm,.registration-button { 
   width: 100%;
   box-sizing: border-box;
@@ -22,4 +26,6 @@
 }
 .registration-button:hover {
   cursor: pointer;
+  background-color: rgb(17, 219, 219);
+  color: rgb(31, 94, 94);
 }

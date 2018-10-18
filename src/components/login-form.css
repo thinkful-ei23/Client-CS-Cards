@@ -18,6 +18,7 @@
   border-width: 2px;
 }
 .login-button:hover {
+  cursor: pointer;
   background-color: rgb(17, 219, 219);
   color: rgb(31, 94, 94);
 }
