@@ -28,10 +28,10 @@ export class Quiz extends React.Component {
     }
     if (this.props.answer) {
       return (
-      <div>
+      <div className='quiz'>
         <p>{this.props.answer.answer}</p>
         <p>{this.props.answer.correctAnswer} : {this.props.question}</p>
-        <button onClick={() => this.fetchNextQuestion()}>Next</button>
+        <button className='next-button' onClick={() => this.fetchNextQuestion()}>Next</button>
       </div>
       );
     } else {

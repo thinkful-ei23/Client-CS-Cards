@@ -30,7 +30,6 @@ export class Dashboard extends React.Component {
         } else {
             quizArea = <Quiz />
         }
-        console.log(this.props.onQuiz)
         return (
             <div className="dashboard">
                 <div className='stats-container'>

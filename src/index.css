@@ -1,5 +1,9 @@
+* { box-sizing: border-box }
+
 body {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  min-height: 95vh;
+  align-items: center;
 }

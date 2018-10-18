@@ -1,3 +1,9 @@
 .button-toggle-quiz {
   border: 1px solid black;
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+.dashboard{
+  text-align: center;
 }

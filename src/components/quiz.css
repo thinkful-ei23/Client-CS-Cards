@@ -1,3 +1,14 @@
 .quiz-input, .quiz-button-submit {
   border: 1px solid black;
 }
+.quiz-input{
+  margin-top: 10px;
+}
+
+.quiz{
+  max-width: 600px;
+}
+
+.next-button{
+  width: 100px;
+}
