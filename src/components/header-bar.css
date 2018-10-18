@@ -8,11 +8,15 @@
   position: fixed;
   top: 1em;
   right: 1em;
+  background: white;
+  padding: 3px;
+  border-radius: 4px;
 }
 .button-logout {
   border: 1px solid black;
   height: 20px;
   margin-left: 1em;
+  border-radius: 4px;
 }
 .welcome-username {
   margin: 0;
