@@ -17,6 +17,7 @@ export class Dashboard extends React.Component {
     componentDidMount() {
         this.props.dispatch(fetchStats());
     }
+
     toggleOnQuiz() {
         this.setState({
             onQuiz: !this.state.onQuiz,
@@ -38,12 +39,18 @@ export class Dashboard extends React.Component {
         }
         return (
             <div className="dashboard">
-                <div className='stats-container'>
-                    <p className='stats-total'>Total Questions Answered: {this.props.stats ? this.props.stats.totalQuestions : 0}</p>
-                    <p className='stats-lifetime'>Lifetime {(this.props.stats && this.props.stats.totalQuestions !== 0) ? Math.floor(this.props.stats.totalRight/this.props.stats.totalQuestions * 100): 0}% Answered Correctly</p>
-                    <p className='stats-current-correct'>{this.props.stats ? this.props.stats.recurringCorrect : 0 } Correct Questions In a Row!</p>
+                <div className='stats-container' aria-live = 'polite'>
+                    <p className='stats-total'>Total Questions Answered: 
+                        {this.props.stats ? this.props.stats.totalQuestions : 0}</p>
+                    <p className='stats-lifetime'>Lifetime 
+                        {(this.props.stats && this.props.stats.totalQuestions !== 0) ? 
+                            Math.floor(this.props.stats.totalRight/this.props.stats.totalQuestions * 100): 0}% Answered Correctly</p>
+                    <p className='stats-current-correct'>
+                        {this.props.stats ? this.props.stats.recurringCorrect : 0 } Correct Questions In a Row!</p>
                 </div>
-                <button type='button' className={`button-toggle-quiz ${startStop}`} onClick={() => this.toggleOnQuiz()}>{this.state.quizButton} Quiz</button>
+                <button type='button' 
+                    className={`button-toggle-quiz ${startStop}`} 
+                    onClick={() => this.toggleOnQuiz()}>{this.state.quizButton} Quiz</button>
                 {quizArea}
             </div>
         );
