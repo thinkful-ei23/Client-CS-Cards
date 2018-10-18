@@ -32,16 +32,6 @@ export class Quiz extends React.Component {
     }else{
       answers = 'incorrect-answer';
     }
-    let questionFontSize;
-    if (this.props.question) {
-      if (this.props.question.length < 220 &&       this.props.question.length > 170) {
-        questionFontSize = 'question-text-high';
-      } else if (this.props.question.length < 170) {
-        questionFontSize = 'question-text-low';
-      } else {
-        questionFontSize = '';
-      }
-    }
     if (this.props.answer) {
       return (
       <div className='quiz' aria-live = 'polite'>
