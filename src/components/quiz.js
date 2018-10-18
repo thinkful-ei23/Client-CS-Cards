@@ -44,7 +44,7 @@ export class Quiz extends React.Component {
     } else {
       return (
         <div className='quiz'>
-          {question}
+          <p className='quiz-question'>{question}</p>
           <form className='quiz-form' onSubmit={(userAnswer) => submitAnswer(userAnswer)}>
             <input id='answer' className='quiz-input' ref={input => (userAnswer = input)} type='text'></input>
             <button className='quiz-button-submit' type='submit'>Submit</button>

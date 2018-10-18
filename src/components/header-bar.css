@@ -17,6 +17,12 @@
   height: 20px;
   margin-left: 1em;
   border-radius: 4px;
+  background-color: rgb(204, 101, 32);
+  color: white;
+}
+.button-logout:hover {
+  background-color: rgb(245, 121, 38);
+  cursor: pointer;
 }
 .welcome-username {
   margin: 0;

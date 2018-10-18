@@ -1,16 +1,27 @@
+.quiz{
+  max-width: 600px;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 1.5em;
+}
+.quiz-question {
+  margin: 1%;
+}
 .quiz-input, .quiz-button-submit {
   border: 1px solid black;
   border-radius: 4px;
+  font-size: .8em;
+}
+.quiz-button-submit {
+  margin-top: 2%;
+}
+.quiz-button-submit:hover {
+  cursor: pointer;
 }
 .quiz-input{
   margin-top: 10px;
 }
-
-.quiz{
-  max-width: 600px;
-  border: 1px solid black;
-}
-
 .next-button{
   border: 1px solid black;
   width: 100px;
