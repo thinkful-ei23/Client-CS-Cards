@@ -7,7 +7,7 @@
   width: 100%;
   border-radius: 4px;
 }
-.login-button{
+.login-button {
   margin: 5% 2%;
   border: 1px solid black;
   border-radius: 4px;
@@ -16,4 +16,8 @@
   color: teal;
   background-color: azure;
   border-width: 2px;
+}
+.login-button:hover {
+  background-color: rgb(17, 219, 219);
+  color: rgb(31, 94, 94);
 }
