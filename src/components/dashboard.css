@@ -31,3 +31,6 @@
   background-color: rgb(245, 121, 38);
   cursor: pointer;
 }
+.stats-container {
+  font-size: 1.2em;
+}
