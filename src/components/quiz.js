@@ -37,7 +37,7 @@ export class Quiz extends React.Component {
       return (
       <div className='quiz'>
         <p className={answers}>{this.props.answer.answer}</p>
-        <p>{this.props.answer.correctAnswer} : {this.props.question}</p>
+        <p><span className="correct-answer">{this.props.answer.correctAnswer}</span> : {this.props.question}</p>
         <button className='next-button' onClick={() => this.fetchNextQuestion()}>Next</button>
       </div>
       );
