@@ -26,10 +26,17 @@ export class Quiz extends React.Component {
       value.preventDefault();
       this.props.dispatch(sendAnswer(userAnswer.value));
     }
+    let answers
+    if(this.props.answer != null && this.props.answer.answer === 'correct'){
+      answers = 'correct-answer'
+    }else{
+      answers = 'incorrect-answer'
+    }
+
     if (this.props.answer) {
       return (
       <div className='quiz'>
-        <p>{this.props.answer.answer}</p>
+        <p className={answers}>{this.props.answer.answer}</p>
         <p>{this.props.answer.correctAnswer} : {this.props.question}</p>
         <button className='next-button' onClick={() => this.fetchNextQuestion()}>Next</button>
       </div>

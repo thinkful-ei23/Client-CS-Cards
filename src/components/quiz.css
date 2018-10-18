@@ -12,3 +12,15 @@
 .next-button{
   width: 100px;
 }
+
+.correct-answer{
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.incorrect-answer{
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
