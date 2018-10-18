@@ -1,7 +1,4 @@
 .registration-form{
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   text-align: center;
   width: 150px;
   margin: 0 auto;
@@ -11,10 +8,12 @@
   box-sizing: border-box;
   border: 1px solid black;
   padding: 1%;
-  margin: 2%; 
+  margin: 2%;
+  border-radius: 4px; 
 }
 .registration-button {
   margin: 5% 2%;
+  border-radius: 4px;
 }
 .registration-button:hover {
   cursor: pointer;
