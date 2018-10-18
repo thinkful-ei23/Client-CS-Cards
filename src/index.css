@@ -6,4 +6,8 @@ body {
   box-sizing: border-box;
   min-height: 95vh;
   align-items: center;
+  background-image:url('./images/circuit-board.jpg');
+  background-size:cover;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
 }

@@ -25,7 +25,7 @@ export class HeaderBar extends React.Component {
         console.log(this.props.loggedIn)
         return (
             <div className="header-bar">
-                <h1>CS Cards</h1>
+                <h1 className='title'>CS Cards</h1>
                 {logOutButton}
             </div>
         );

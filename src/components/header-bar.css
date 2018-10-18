@@ -1,3 +1,8 @@
+.header-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .welcome-logout-container {
   display: flex;
   position: fixed;
@@ -12,7 +17,10 @@
 .welcome-username {
   margin: 0;
 }
-h1{
-  display: flex;
+.title {
+  display: inline-block;
   justify-content: center;
+  padding: 5px 10px;
+  background: white;
+  border-radius: 4px;
 }
