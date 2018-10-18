@@ -35,7 +35,7 @@ export class Quiz extends React.Component {
 
     if (this.props.answer) {
       return (
-      <div className='quiz'>
+      <div className='quiz' aria-live = 'polite'>
         <p className={answers}>{this.props.answer.answer}</p>
         <p><span className="correct-answer">{this.props.answer.correctAnswer}</span> : {this.props.question}</p>
         <button className='next-button' onClick={() => this.fetchNextQuestion()}>Next</button>
@@ -43,9 +43,9 @@ export class Quiz extends React.Component {
       );
     } else {
       return (
-        <div className='quiz'>
+        <div className='quiz' aria-live = 'polite'>
           <p className='quiz-question'>{question}</p>
-          <form className='quiz-form' onSubmit={(userAnswer) => submitAnswer(userAnswer)}>
+            <form className='quiz-form' onSubmit={(userAnswer) => submitAnswer(userAnswer)}>
             <input id='answer' className='quiz-input' ref={input => (userAnswer = input)} type='text'></input>
             <button className='quiz-button-submit' type='submit'>Submit</button>
           </form>
