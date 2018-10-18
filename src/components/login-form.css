@@ -9,5 +9,11 @@
 }
 .login-button{
   margin: 5% 2%;
-  border: 1px solid black
+  border: 1px solid black;
+  border-radius: 4px;
+  height: 25px;
+  font-weight: bold;
+  color: teal;
+  background-color: azure;
+  border-width: 2px;
 }

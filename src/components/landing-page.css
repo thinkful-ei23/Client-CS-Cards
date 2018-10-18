@@ -2,11 +2,16 @@
     background: white;
     padding: 10px;
     border-radius: 4px;
+    width: 250px;
+    padding-bottom: 15px;
+    padding-top: 5px;
 }
 .landing-h2 {
     display: flex;
     justify-content: center;
     margin: 0;
+    text-align:center;
+    margin-bottom: 5px;
 }
 a {
     display: flex;

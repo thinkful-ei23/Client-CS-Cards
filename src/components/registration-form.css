@@ -14,6 +14,11 @@
 .registration-button {
   margin: 5% 2%;
   border-radius: 4px;
+  height: 25px;
+  font-weight: bold;
+  color: teal;
+  background-color: azure;
+  border-width: 2px;
 }
 .registration-button:hover {
   cursor: pointer;
