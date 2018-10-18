@@ -17,6 +17,7 @@ export class Dashboard extends React.Component {
     componentDidMount() {
         this.props.dispatch(fetchStats());
     }
+    
     toggleOnQuiz() {
         this.setState({
             onQuiz: !this.state.onQuiz,
