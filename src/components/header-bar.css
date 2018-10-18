@@ -1,10 +1,17 @@
-.button-logout {
+.welcome-logout-container {
+  display: flex;
   position: fixed;
   top: 1em;
   right: 1em;
-  border: 1px solid black;
 }
-
+.button-logout {
+  border: 1px solid black;
+  height: 20px;
+  margin-left: 1em;
+}
+.welcome-username {
+  margin: 0;
+}
 h1{
   display: flex;
   justify-content: center;

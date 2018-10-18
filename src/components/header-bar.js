@@ -16,9 +16,13 @@ export class HeaderBar extends React.Component {
         let logOutButton;
         if (this.props.loggedIn) {
             logOutButton = (
+                <div className='welcome-logout-container'>
+                    <p className='welcome-username'>Welcome, {this.props.currentUser.username}</p>
                     <button className='button-logout' onClick={() => this.logOut()}>Log out</button>
+                </div>
             );
         }
+        console.log(this.props.loggedIn)
         return (
             <div className="header-bar">
                 <h1>CS Cards</h1>
@@ -31,6 +35,7 @@ export class HeaderBar extends React.Component {
 const mapStateToProps = state => {
     return{
         loggedIn: state.auth.currentUser !== null,
+        currentUser: state.auth.currentUser
     }
 };
 
