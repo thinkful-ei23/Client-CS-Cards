@@ -28,6 +28,7 @@
   margin: 0;
 }
 .title {
+  font-size: 3em;
   display: inline-block;
   justify-content: center;
   padding: 5px 10px;
