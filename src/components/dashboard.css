@@ -11,3 +11,19 @@
   border-radius: 4px;
   padding: 3%;
 }
+.green-button {
+  background-color: rgb(69, 204, 170);
+  color: white;
+}
+.green-button:hover {
+  background-color: rgb(36, 243, 191);
+  cursor: pointer;
+}
+.red-button {
+  background-color: rgb(204, 101, 32);
+  color: white;
+}
+.red-button:hover {
+  background-color: rgb(245, 121, 38);
+  cursor: pointer;
+}

@@ -30,6 +30,12 @@ export class Dashboard extends React.Component {
         } else {
             quizArea = <Quiz />
         }
+        let startStop;
+        if (this.state.onQuiz) {
+            startStop = 'red-button';
+        } else {
+            startStop = 'green-button';
+        }
         return (
             <div className="dashboard">
                 <div className='stats-container'>
@@ -37,7 +43,7 @@ export class Dashboard extends React.Component {
                     <p className='stats-lifetime'>Lifetime {(this.props.stats && this.props.stats.totalQuestions !== 0) ? Math.floor(this.props.stats.totalRight/this.props.stats.totalQuestions * 100): 0}% Answered Correctly</p>
                     <p className='stats-current-correct'>{this.props.stats ? this.props.stats.recurringCorrect : 0 } Correct Questions In a Row!</p>
                 </div>
-                <button type='button' className='button-toggle-quiz'onClick={() => this.toggleOnQuiz()}>{this.state.quizButton} Quiz</button>
+                <button type='button' className={`button-toggle-quiz ${startStop}`} onClick={() => this.toggleOnQuiz()}>{this.state.quizButton} Quiz</button>
                 {quizArea}
             </div>
         );
