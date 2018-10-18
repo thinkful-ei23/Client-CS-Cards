@@ -1,5 +1,6 @@
 .quiz-input, .quiz-button-submit {
   border: 1px solid black;
+  border-radius: 4px;
 }
 .quiz-input{
   margin-top: 10px;
@@ -12,6 +13,7 @@
 .next-button{
   border: 1px solid black;
   width: 100px;
+  border-radius: 4px;
 }
 
 .correct-answer{

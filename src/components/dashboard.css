@@ -2,8 +2,12 @@
   border: 1px solid black;
   margin-bottom: 10px;
   width: 100px;
+  border-radius: 4px;
 }
 
 .dashboard{
   text-align: center;
+  background-color: white;
+  border-radius: 4px;
+  padding: 3%;
 }
