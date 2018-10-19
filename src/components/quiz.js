@@ -49,6 +49,7 @@ export class Quiz extends React.Component {
         <div className='quiz' aria-live = 'polite'>
           <p className='quiz-question'>{question}</p>
             <form className='quiz-form' onSubmit={(userAnswer) => submitAnswer(userAnswer)}>
+            <label htmlFor ='answer'>answer : </label>
             <input id='answer' className='quiz-input' ref={input => (userAnswer = input)} type='text'></input>
             <button className='quiz-button-submit' type='submit'>Submit</button>
             <div className='quiz-submit-error'>{error}</div>

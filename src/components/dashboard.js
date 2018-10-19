@@ -44,7 +44,7 @@ export class Dashboard extends React.Component {
                 <div className='stats-container' aria-live = 'polite'>
                     <p className='stats-total'>Total Questions Answered: 
                         {this.props.stats ? this.props.stats.totalQuestions : 0}</p>
-                    <p className='stats-lifetime'>Lifetime &nbsp;{(this.props.stats && this.props.stats.totalQuestions !== 0) ? 
+                    <p className='stats-lifetime'>Lifetime&nbsp;{(this.props.stats && this.props.stats.totalQuestions !== 0) ? 
                             Math.floor(this.props.stats.totalRight/this.props.stats.totalQuestions * 100): 0}% Answered Correctly</p>
                     <p className='stats-current-correct'>
                         {this.props.stats ? this.props.stats.recurringCorrect : 0 } Correct Questions In a Row!</p>
