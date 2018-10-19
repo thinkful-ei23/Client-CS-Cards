@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchStats} from '../actions/stats';
 import Quiz from './quiz';
+import Chat from './chat';
 
 import './dashboard.css' 
 
@@ -37,6 +38,7 @@ export class Dashboard extends React.Component {
         } else {
             startStop = 'green-button';
         }
+        let username = this.props.username;
         return (
             <div className="dashboard">
                 <div className='stats-container' aria-live = 'polite'>
@@ -51,6 +53,7 @@ export class Dashboard extends React.Component {
                     className={`button-toggle-quiz ${startStop}`} 
                     onClick={() => this.toggleOnQuiz()}>{this.state.quizButton} Quiz</button>
                 {quizArea}
+                <Chat username={username}/>
             </div>
         );
     }
