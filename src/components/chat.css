@@ -1,3 +1,33 @@
 .container {
   background: white;
+  border: 1px solid black;
+  border-radius: 4%;
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(125,125,125,1);
+  -moz-box-shadow: 0px 0px 1px 1px rgba(125,125,125,1);
+  box-shadow: 0px 0px 1px 1px rgba(125,125,125,1);
+}
+
+.card-title{
+  padding-top: 10px;
+}
+
+.btn{
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(125,125,125,1);
+  -moz-box-shadow: 0px 0px 1px 1px rgba(125,125,125,1);
+  box-shadow: 0px 0px 1px 1px rgba(125,125,125,1);
+  width: 100px;
+  background-color: gold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 4%;
+}
+
+.btn:hover{
+  cursor: pointer;
+background-color: rgb(248, 225, 97);
+}
+
+.card-footer input{
+  border-radius: 4%;
+  background-color: azure;
 }

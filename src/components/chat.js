@@ -26,9 +26,7 @@ class Chat extends React.Component{
             }else{
                 const tempMessages = this.state.messages
                 let newMessages = tempMessages.slice(1,10)
-                console.log(newMessages,'BEFORE PUSH')
                 newMessages.push(data)
-                console.log(newMessages, "AFTER PUSH")
                 this.setState({
                     messages: newMessages
                 })
@@ -54,7 +52,7 @@ class Chat extends React.Component{
                     <div className="col-4">
                         <div className="card">
                             <div className="card-body">
-                                <div className="card-title">Global Chat</div>
+                                <div className="card-title">CS Cards Live Chat</div>
                                 <hr/>
                                 <div className="messages">
                                     {this.state.messages.map((message, index) => {
