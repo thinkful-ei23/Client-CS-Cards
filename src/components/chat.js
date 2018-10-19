@@ -21,17 +21,28 @@ class Chat extends React.Component{
         });
 
         const addMessage = data => {
-            this.setState({messages: [...this.state.messages, data]});
+            if(this.state.messages.length <10){
+                this.setState({messages: [...this.state.messages, data]});
+            }else{
+                const tempMessages = this.state.messages
+                let newMessages = tempMessages.slice(1,10)
+                console.log(newMessages,'BEFORE PUSH')
+                newMessages.push(data)
+                console.log(newMessages, "AFTER PUSH")
+                this.setState({
+                    messages: newMessages
+                })
+            }
+        console.log(this.state.messages)
+
         };
 
         this.sendMessage = ev => {
-            console.log('sending?')
             ev.preventDefault();
             this.socket.emit('SEND_MESSAGE', {
                 author: this.props.username,
                 message: this.state.message
             })
-            console.log("sent!")
             this.setState({message: ''});
 
         }
