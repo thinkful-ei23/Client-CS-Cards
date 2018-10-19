@@ -32,6 +32,10 @@ export class Quiz extends React.Component {
     }else{
       answers = 'incorrect-answer';
     }
+    let error;
+    if (this.props.error) {
+      error = this.props.error.message;
+    }
     if (this.props.answer) {
       return (
       <div className='quiz' aria-live = 'polite'>
@@ -47,6 +51,7 @@ export class Quiz extends React.Component {
             <form className='quiz-form' onSubmit={(userAnswer) => submitAnswer(userAnswer)}>
             <input id='answer' className='quiz-input' ref={input => (userAnswer = input)} type='text'></input>
             <button className='quiz-button-submit' type='submit'>Submit</button>
+            <div className='quiz-submit-error'>{error}</div>
           </form>
         </div>
       );
@@ -57,7 +62,8 @@ export class Quiz extends React.Component {
 const mapStateToProps = state => {
   return {
     question: state.quiz.question,
-    answer: state.quiz.answer
+    answer: state.quiz.answer,
+    error: state.quiz.error
   };
 };
 
