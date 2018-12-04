@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Link, Redirect} from 'react-router-dom';
 import ReadMe from './ReadMe'
 import LoginForm from './login-form';
+import DemoAccount from './demoAccount';
 import './landing-page.css'
 
 export function LandingPage(props) {
@@ -16,6 +17,7 @@ export function LandingPage(props) {
             <h2 className='landing-h2'>Welcome to CS Cards</h2>
             <LoginForm />
             <Link to="/register">Register</Link>
+            <DemoAccount />
             <ReadMe />
         </div>
     );

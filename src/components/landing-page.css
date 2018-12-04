@@ -17,6 +17,7 @@
     margin-bottom: 5px;
 }
 a {
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
 }
@@ -27,4 +28,7 @@ a {
     max-width: 600px;
     margin: 0 auto;
     text-align:center;
+}
+.readme p {
+    margin-top: 0;
 }
