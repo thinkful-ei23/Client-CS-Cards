@@ -9,6 +9,12 @@ CS Cards is a learning app built with a custom spaced-repetition algorithm using
 ## Spaced-Repetition
 Spaced repetition is a method for efficient learning that has you practice concepts or skills over increasing periods of time. It's based on the notion of a "forgetting curve," or the idea that over time, if we don't actively use or reflect on something we know, our knowledge decays. With spaced repetition, we stay ahead of that moment of forgetting by being exposed to the concepts we struggle with more often.
 
+### Mobile Screenshots
+
+| <img alt="Landing/Login page" src="" width="350"> | <img alt="dashboard" src="" width="350"> | <img alt="quiz" src="" width="350"> | 
+|:---:|:---:|:---:|
+| Landing/Login Page | Dashboard | First Question | 
+
 ## Tech Used
 
 ### Front-End

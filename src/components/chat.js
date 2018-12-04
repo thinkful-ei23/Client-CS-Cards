@@ -31,8 +31,6 @@ class Chat extends React.Component{
                     messages: newMessages
                 })
             }
-        console.log(this.state.messages)
-
         };
 
         this.sendMessage = ev => {
