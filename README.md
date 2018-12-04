@@ -11,7 +11,7 @@ Spaced repetition is a method for efficient learning that has you practice conce
 
 ### Mobile Screenshots
 
-| <img alt="Landing/Login page" src="" width="350"> | <img alt="dashboard" src="" width="350"> | <img alt="quiz" src="" width="350"> | 
+| <img alt="Landing/Login page" src="https://github.com/thinkful-ei23/Client-CS-Cards/blob/master/src/images/screenshots/mobile-landing.png?raw=true" width="350"> | <img alt="dashboard" src="https://github.com/thinkful-ei23/Client-CS-Cards/blob/master/src/images/screenshots/mobile-dashboard.png?raw=true" width="350"> | <img alt="quiz" src="https://github.com/thinkful-ei23/Client-CS-Cards/blob/master/src/images/screenshots/mobile-question.png?raw=true" width="350"> | 
 |:---:|:---:|:---:|
 | Landing/Login Page | Dashboard | First Question | 
 
