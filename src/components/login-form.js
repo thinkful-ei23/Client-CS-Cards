@@ -33,6 +33,7 @@ export class LoginForm extends React.Component {
                     type="text"
                     name="username"
                     id="username"
+                    autoComplete="username"
                     validate={[required, nonEmpty]}
                 />
                 <label htmlFor="password">Password</label>
@@ -41,6 +42,7 @@ export class LoginForm extends React.Component {
                     type="password"
                     name="password"
                     id="password"
+                    autoComplete="password"
                     validate={[required, nonEmpty]}
                 />
                 <button className="login-button" disabled={this.props.pristine || this.props.submitting}>
